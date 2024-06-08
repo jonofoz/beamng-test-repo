@@ -1,0 +1,41 @@
+{
+    "tutorial": {
+        "information": {
+            "name": "TutorialV2",
+            "author": "7c",
+            "value": 10000000000000000
+        },
+        
+        "slotType": "main",
+        
+        "refNodes": [
+            ["ref:", "left:", "back:", "up:"],
+            ["tc", "tl", "tb", "tu"]
+        ],
+
+        "nodes": [
+            ["id", "posX", "posY", "posZ"],
+            {"nodeWeight": 10},
+            //{"nodeMaterial": "|NM_RUBBER"},
+            {"collision": true},
+            {"selfCollision": false},
+            ["tc", 0, 0, 0],
+            ["tl", 1, 0, 0],
+            ["tb", 0, 1, 0],
+            ["tu", 0, 0, 1]
+        ],
+
+        "beams": [
+            ["id1:", "id2:"],
+            {"beamSpring": 20000},
+            {"beamDamp": 2000},
+            ["tc", "tu"],
+            ["tc", "tl"],
+            ["tc", "tb"],
+
+            ["tu", "tb"],
+            ["tu", "tl"],
+            ["tl", "tb"],
+        ]
+    }
+}
